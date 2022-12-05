@@ -1,0 +1,55 @@
+{% extends 'base.html' %} {% block title %}Register{% endblock %} {% block content %}
+
+<section class="">
+  <div class="">
+    <div class="">
+      <div class="">
+        <div class="">
+          <h2 class="">Register</h2>
+
+          <form action="{% url 'register' %}" method="POST" autocomplete="off">{% csrf_token %}
+
+            <div class="">
+              <label for="{{ form.username.id_for_label }}" class="">
+                Username
+              </label>
+              <div class="">{{ form.username}}</div>
+              <p class="">{{ form.username.errors }}</p>
+            </div>
+
+            <div class="">
+                <label for="{{ form.email.id_for_label }}" class="">
+                  Email
+                </label>
+                <div class="">{{ form.email}}</div>
+                <p class="">{{ form.email.errors }}</p>
+              </div>
+            <div class="">
+              <label for="{{ form.password1.id_for_label }}" class="">
+                Password
+              </label>
+              <div class="">{{ form.password1}}</div>
+              <p>{{form.password1.help_text}}</p>
+              <p class="">{{ form.password1.errors }}</p>
+            </div>
+
+            <div class="">
+              <label for="{{ form.password2.id_for_label }}" class="">
+                Password Check
+              </label>
+              <div class="">{{ form.password2}}</div>
+              <p class="">{{ form.password2.errors }}</p>
+            </div>
+
+            <div class="">
+              <div class="">
+                <button class="">Submit</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{%endblock content%}

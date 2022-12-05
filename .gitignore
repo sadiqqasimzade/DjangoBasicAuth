@@ -1,0 +1,38 @@
+# WhiteNoise
+/staticfiles
+
+# Django stuff:
+*.log
+local_settings.py
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+#env
+/myenv
+
+
+# DEV
+
+#env
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+#node
+node_modules/
+# package.json
+# package-lock.json
+# babel.config.json
+# webpack.config.js
+
+
+#db
+# db.sqlite3
+db.sqlite3-journal

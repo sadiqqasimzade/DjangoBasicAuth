@@ -1,0 +1,19 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>_</title>
+  </head>
+  <body>
+    {% if user.is_authenticated %}
+    <p>Welcome, {{ user.get_username }}. Thanks for logging in.</p>
+    <a href='auth/logout'>Log out</a>
+    {% else %}
+    <p>Welcome, new user. Please log in.</p>
+    <a href='auth/login'>login</a>
+    <a href='auth/register'>register</a>
+
+    {% endif %}
+  </body>
+</html>
